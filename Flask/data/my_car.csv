@@ -1,0 +1,2 @@
+,driving_duration,idel_duration,heat_duration,med_speed,peak_speed,speed1,speed2,speed3,speed4,speed5,acc1,acc2,acc3,acc4,ret1,ret2,ret3,ret4,ret5,weekday_driving_ratio,energy_eff_mean,hvac_on_ratio,large_steering_angle_diff_mean,cluster
+1,0.867819086,0.132180914,0.012242482,42,147.2,0.283376746,0.200236798,0.221240824,0.159767937,0.135377694,0.133531157,0.00148368,0.004451039,0.002967359,0,0.00148368,0.03264095,0.129080119,0.8115727,0.866666667,-0.238593606,0.003327019,1.299703264,A

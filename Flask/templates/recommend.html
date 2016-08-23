@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<!--
+Template Name: Escarine-Veh
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+<html>
+<head>
+  <title>현대 카풀 서비스 | 단기카풀</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="{{ url_for('static', filename='css/layout.css') }}" rel="stylesheet" type="text/css" media="all">
+
+
+  
+
+  <!-- JAVASCRIPTS -->
+  <script src="{{ url_for('static', filename='js/jquery.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.mobilemenu.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.backtotop.js')}}"></script>
+  <!-- IE9 Placeholder Support -->
+  <script src="{{ url_for('static', filename='js/jquery.placeholder.min.js')}}"></script>
+
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}">
+  </script>
+
+  
+</head>
+<body id="top">
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- Top Background Image Wrapper -->
+  <div class="relative bgded overlay" style="background-image:url('{{ url_for('static', filename='image/backgrounds/hyundai.jpg') }}');"> 
+    <!-- ################################################################################################ -->
+    <div class="wrapper row0">
+      <div id="topbar" class="hoc clear"> 
+        <!-- ################################################################################################ -->
+        <div class="fl_left">
+          <ul class="nospace inline pushright">
+            <li><i class="fa fa-user"></i> <a href="#">Register</a></li>
+            <li><i class="fa fa-sign-in"></i> <a href="#">Login</a></li>
+          </ul>
+        </div>
+        <div class="fl_right">
+          <ul class="faico clear">
+            <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="faicon-pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
+            <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a class="faicon-rss" href="#"><i class="fa fa-rss"></i></a></li>
+          </ul>
+        </div>
+        <!-- ################################################################################################ -->
+      </div>
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <div class="wrapper">
+      <header id="header" class="hoc clear"> 
+        <!-- ################################################################################################ -->
+        <div id="logo" class="fl_left">
+          <h1><a href="{{ url_for('home') }}">현대 카풀 서비스</a></h1>
+        </div>
+        <div class="fl_right">
+          <ul class="nospace inline pushright">
+            <li><i class="fa fa-phone"></i> (010) 5052 5601</li>
+            <li><i class="fa fa-envelope-o"></i> seungeun07@snu.ac.kr</li>
+          </ul>
+        </div>
+        <!-- ################################################################################################ -->
+      </header>
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <div class="wrapper row2">
+      <nav id="mainav" class="hoc clear"> 
+        <!-- ################################################################################################ -->
+        <ul class="clear">
+        <li><a href="#">정기카풀</a></li>
+        <li><a href="{{ url_for('recommend') }}">단기카플</a></li>
+        <li><a href="#">추천카풀</a></li>
+        <li><a href="#">여성전용카풀</a></li>
+        <li><a href="#">고객센터</a></li>
+      </ul>
+        <!-- ################################################################################################ -->
+      </nav>
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <div class="wrapper right">
+      <div id="pagetitle" class="hoc clear"> 
+        <!-- ################################################################################################ -->
+        <h2>언제든 이용할 수 있는, 단기 카풀 목록입니다.</h2>
+        <!-- ################################################################################################ -->
+      </div>
+      <div id="breadcrumb" class="hoc clear"> 
+        <!-- ################################################################################################ -->
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">단기카풀</a></li>
+        </ul>
+        <!-- ################################################################################################ -->
+      </div>
+    </div>
+    <!-- ################################################################################################ -->
+  </div>
+  <!-- End Top Background Image Wrapper -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="wrapper row3">
+    <main class="hoc container clear"> 
+      <!-- main body -->
+      <!-- ################################################################################################ -->
+      <div class="content"> 
+        <!-- ################################################################################################ -->
+        <div id="gallery">
+          <figure>
+            <header class="heading">추천 차량 목록</header>
+            <br>
+            <main id="introblocks" class="hoc container clear"> 
+              <!-- main body -->
+              <!-- ################################################################################################ -->
+              <ul class="nospace group elements">
+                <li class="one_third first">
+                  <article class="elementwrapper">
+                    <figure><img src="{{ url_for('static', filename='image/recommend/car1.jpg') }}" alt="">
+                      <figcaption><a href="{{ url_for('show_match', driver_id=1) }}"><i class="fa fa-motorcycle"></i></a></figcaption>
+                    </figure>
+                    <div class="elementinfo">
+                      <h4 class="heading font-x1">그랜저 3.3</h4>
+                      <p>서울 -> 부산</p>
+                      <p>2016년 8월 23일 8:30</p>
+                    </div>
+                    <ul class="nospace group meta">
+                      <li><i class="fa fa-motorcycle"></i> 2015</li>
+                      <li><i class="fa fa-gears"></i> Manual</li>
+                      <li><i class="fa fa-tachometer"></i> 5,036</li>
+                      <li><i class="fa fa-info"></i> <a href="{{ url_for('show_match', driver_id=1) }}">Details</a></li>
+                    </ul>
+                  </article>
+                </li>
+                <li class="one_third">
+                  <article class="elementwrapper">
+                  <figure><img src="{{ url_for('static', filename='image/recommend/car2.jpg') }}" alt="">
+                      <figcaption><a href="{{ url_for('show_match', driver_id=2) }}"><i class="fa fa-car"></i></a></figcaption>
+                    </figure>
+                    <div class="elementinfo">
+                      <h4 class="heading font-x1">쏘나타 브릴리언트</h4>
+                      <p>부산 -> 서울</p>
+                      <p>2016년 8월 22일 19:30</p>
+                    </div>
+                    <ul class="nospace group meta">
+                      <li><i class="fa fa-car"></i> 2014</li>
+                      <li><i class="fa fa-gears"></i> Auto.</li>
+                      <li><i class="fa fa-tachometer"></i> 12,651</li>
+                      <li><i class="fa fa-info"></i> <a href="{{ url_for('show_match', driver_id=2) }}">Details</a></li>
+                    </ul>
+                  </article>
+                </li>
+                <li class="one_third">
+                  <article class="elementwrapper">
+                    <figure><img src="{{ url_for('static', filename='image/recommend/car3.jpg') }}" alt="">
+                      <figcaption><a href="{{ url_for('show_match', driver_id=3) }}"><i class="fa fa-truck"></i></a></figcaption>
+                    </figure>
+                    <div class="elementinfo">
+                      <h4 class="heading font-x1">투싼</h4>
+                      <p>대구 -> 부산</p>
+                      <p>2016년 8월 22일 20:40</p>
+                    </div>
+                    <ul class="nospace group meta">
+                      <li><i class="fa fa-truck"></i> 2014</li>
+                      <li><i class="fa fa-gears"></i> Manual</li>
+                      <li><i class="fa fa-tachometer"></i> 65,725</li>
+                      <li><i class="fa fa-info"></i> <a href="{{ url_for('show_match', driver_id=3) }}" >Details</a></li>
+                    </ul>
+                  </article>
+                </li>
+
+              </ul>
+              <!-- ################################################################################################ -->
+              <!-- / main body -->
+              <div class="clear"></div>
+            </main>
+
+            <main id="introblocks" class="hoc clear"> 
+              <!-- main body -->
+              <!-- ################################################################################################ -->
+              <ul class="nospace group elements">
+                <li class="one_third first">
+                  <article class="elementwrapper">
+                    <figure><img src="{{ url_for('static', filename='image/recommend/car4.jpg') }}" alt="">
+                      <figcaption><a href="{{ url_for('show_match', driver_id=4) }}"><i class="fa fa-motorcycle"></i></a></figcaption>
+                    </figure>
+                    <div class="elementinfo">
+                      <h4 class="heading font-x1">그랜저 3.3</h4>
+                      <p>대구 -> 충주</p>
+                      <p>2016년 8월 23일 8:30</p>
+                    </div>
+                    <ul class="nospace group meta">
+                      <li><i class="fa fa-motorcycle"></i> 2015</li>
+                      <li><i class="fa fa-gears"></i> Manual</li>
+                      <li><i class="fa fa-tachometer"></i> 5,036</li>
+                      <li><i class="fa fa-info"></i> <a href="{{ url_for('show_match', driver_id=4) }}" >Details</a></li>
+                    </ul>
+                  </article>
+                </li>
+                <li class="one_third">
+                  <article class="elementwrapper">
+                    <figure><img src="{{ url_for('static', filename='image/recommend/car5.jpg') }}" alt="">
+                      <figcaption><a href="{{ url_for('show_match', driver_id=5) }}" ><i class="fa fa-car"></i></a></figcaption>
+                    </figure>
+                    <div class="elementinfo">
+                      <h4 class="heading font-x1">제네시스</h4>
+                      <p>전주 -> 나주</p>
+                      <p>2016년 8월 22일 19:30</p>
+                    </div>
+                    <ul class="nospace group meta">
+                      <li><i class="fa fa-car"></i> 2014</li>
+                      <li><i class="fa fa-gears"></i> Auto.</li>
+                      <li><i class="fa fa-tachometer"></i> 12,651</li>
+                      <li><i class="fa fa-info"></i> <a href="{{ url_for('show_match', driver_id=5) }}"  >Details</a></li>
+                    </ul>
+                  </article>
+                </li>
+                <li class="one_third">
+                  <article class="elementwrapper">
+                    <figure><img src="{{ url_for('static', filename='image/recommend/car6.jpg') }}" alt="">
+                      <figcaption><a href="{{ url_for('show_match', driver_id=6) }}"  ><i class="fa fa-truck"></i></a></figcaption>
+                    </figure>
+                    <div class="elementinfo">
+                      <h4 class="heading font-x1">HND-6</h4>
+                      <p>서울 강남 -> 광화문</p>
+                      <p>2016년 8월 22일 20:40</p>
+                    </div>
+                    <ul class="nospace group meta">
+                      <li><i class="fa fa-truck"></i> 2014</li>
+                      <li><i class="fa fa-gears"></i> Manual</li>
+                      <li><i class="fa fa-tachometer"></i> 65,725</li>
+                      <li><i class="fa fa-info"></i> <a href="{{ url_for('show_match', driver_id=6) }}" >Details</a></li>
+                    </ul>
+                  </article>
+                </li>
+
+              </ul>
+              <!-- ################################################################################################ -->
+              <!-- / main body -->
+              <div class="clear"></div>
+            </main>
+
+            <main id="introblocks" class="hoc clear"> 
+              <!-- main body -->
+              <!-- ################################################################################################ -->
+              <ul class="nospace group elements">
+                <li class="one_third first">
+                  <article class="elementwrapper">
+                    <figure><img src="{{ url_for('static', filename='image/recommend/car7.jpg') }}" alt="">
+                      <figcaption><a href="{{ url_for('show_match', driver_id=7) }}" ><i class="fa fa-motorcycle"></i></a></figcaption>
+                    </figure>
+                    <div class="elementinfo">
+                      <h4 class="heading font-x1">그랜저 3.3</h4>
+                      <p>서울 -> 부산</p>
+                      <p>2016년 8월 23일 8:30</p>
+                    </div>
+                    <ul class="nospace group meta">
+                      <li><i class="fa fa-motorcycle"></i> 2015</li>
+                      <li><i class="fa fa-gears"></i> Manual</li>
+                      <li><i class="fa fa-tachometer"></i> 5,036</li>
+                      <li><i class="fa fa-info"></i> <a href="{{ url_for('show_match', driver_id=7) }}"  >Details</a></li>
+                    </ul>
+                  </article>
+                </li>
+                <li class="one_third">
+                  <article class="elementwrapper">
+                  <figure><img src="{{ url_for('static', filename='image/recommend/car8.jpg') }}" alt="">
+                      <figcaption><a href="{{ url_for('show_match', driver_id=8) }}" ><i class="fa fa-car"></i></a></figcaption>
+                    </figure>
+                    <div class="elementinfo">
+                      <h4 class="heading font-x1">쏘나타 브릴리언트</h4>
+                      <p>서울 -> 부산</p>
+                      <p>2016년 8월 22일 19:30</p>
+                    </div>
+                    <ul class="nospace group meta">
+                      <li><i class="fa fa-car"></i> 2014</li>
+                      <li><i class="fa fa-gears"></i> Auto.</li>
+                      <li><i class="fa fa-tachometer"></i> 12,651</li>
+                      <li><i class="fa fa-info"></i> <a href="{{ url_for('show_match', driver_id=8) }}" >Details</a></li>
+                    </ul>
+                  </article>
+                </li>
+                <li class="one_third">
+                  <article class="elementwrapper">
+                    <figure><img src="{{ url_for('static', filename='image/recommend/car9.jpg') }}" alt="">
+                      <figcaption><a href="{{ url_for('show_match', driver_id=9) }}" ><i class="fa fa-truck"></i></a></figcaption>
+                    </figure>
+                    <div class="elementinfo">
+                      <h4 class="heading font-x1">투싼</h4>
+                      <p>서울 -> 부산</p>
+                      <p>2016년 8월 22일 20:40</p>
+                    </div>
+                    <ul class="nospace group meta">
+                      <li><i class="fa fa-truck"></i> 2014</li>
+                      <li><i class="fa fa-gears"></i> Manual</li>
+                      <li><i class="fa fa-tachometer"></i> 65,725</li>
+                      <li><i class="fa fa-info"></i> <a href="{{ url_for('show_match', driver_id=9) }}" >Details</a></li>
+                    </ul>
+                  </article>
+                </li>
+
+              </ul>
+              <!-- ################################################################################################ -->
+              <!-- / main body -->
+              <div class="clear"></div>
+            </main>
+
+            <main id="introblocks" class="hoc clear"> 
+              <!-- main body -->
+              <!-- ################################################################################################ -->
+              <ul class="nospace group elements">
+                <li class="one_third first">
+                  <article class="elementwrapper">
+                    <figure><img src="{{ url_for('static', filename='image/recommend/car10.jpg') }}" alt="">
+                      <figcaption><a href="{{ url_for('show_match', driver_id=10) }}" ><i class="fa fa-motorcycle"></i></a></figcaption>
+                    </figure>
+                    <div class="elementinfo">
+                      <h4 class="heading font-x1">스타크래프트</h4>
+                      <p>서울 -> 부산</p>
+                      <p>2016년 8월 23일 8:30</p>
+                    </div>
+                    <ul class="nospace group meta">
+                      <li><i class="fa fa-motorcycle"></i> 2015</li>
+                      <li><i class="fa fa-gears"></i> Manual</li>
+                      <li><i class="fa fa-tachometer"></i> 5,036</li>
+                      <li><i class="fa fa-info"></i> <a href="{{ url_for('show_match', driver_id=10) }}" >Details</a></li>
+                    </ul>
+                  </article>
+                </li>
+                <li class="one_third">
+                  <article class="elementwrapper">
+                  <figure><img src="{{ url_for('static', filename='image/recommend/car11.jpg') }}" alt="">
+                      <figcaption><a href="{{ url_for('show_match', driver_id=11) }}" ><i class="fa fa-car"></i></a></figcaption>
+                    </figure>
+                    <div class="elementinfo">
+                      <h4 class="heading font-x1">쏘나타 브릴리언트</h4>
+                      <p>서울 -> 부산</p>
+                      <p>2016년 8월 22일 19:30</p>
+                    </div>
+                    <ul class="nospace group meta">
+                      <li><i class="fa fa-car"></i> 2014</li>
+                      <li><i class="fa fa-gears"></i> Auto.</li>
+                      <li><i class="fa fa-tachometer"></i> 12,651</li>
+                      <li><i class="fa fa-info"></i> <a href="{{ url_for('show_match', driver_id=11) }}" >Details</a></li>
+                    </ul>
+                  </article>
+                </li>
+                <li class="one_third">
+                  <article class="elementwrapper">
+                    <figure><img src="{{ url_for('static', filename='image/recommend/car12.jpg') }}" alt="">
+                      <figcaption><a href="{{ url_for('show_match', driver_id=12) }}" ><i class="fa fa-truck"></i></a></figcaption>
+                    </figure>
+                    <div class="elementinfo">
+                      <h4 class="heading font-x1">트럭</h4>
+                      <p>서울 -> 부산</p>
+                      <p>2016년 8월 22일 20:40</p>
+                    </div>
+                    <ul class="nospace group meta">
+                      <li><i class="fa fa-truck"></i> 2014</li>
+                      <li><i class="fa fa-gears"></i> Manual</li>
+                      <li><i class="fa fa-tachometer"></i> 65,725</li>
+                      <li><i class="fa fa-info"></i> <a href="{{ url_for('show_match', driver_id=12) }}" >Details</a></li>
+                    </ul>
+                  </article>
+                </li>
+
+              </ul>
+              <!-- ################################################################################################ -->
+              <!-- / main body -->
+              <div class="clear"></div>
+            </main>
+
+
+            <figcaption>Gallery Description Goes Here</figcaption>
+          </figure>
+        </div>
+
+      </div>
+      <!-- ################################################################################################ -->
+      <!-- / main body -->
+
+    </main>
+  </div>
+
+
+
+
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- Bottom Background Image Wrapper -->
+  <div class="bgded" style="background-image:url('../images/demo/backgrounds/01.png');"> 
+    <!-- ################################################################################################ -->
+
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    
+    <div class="wrapper row5">
+      <div id="copyright" class="hoc clear"> 
+        <!-- ################################################################################################ -->
+        <p class="fl_left">Copyright &copy; 2015 - All Rights Reserved - <a href="#">ADSL, Hyundai Hackathon</a></p>
+        <!-- ################################################################################################ -->
+      </div>
+    </div>
+    <!-- ################################################################################################ -->
+  </div>
+  <!-- End Bottom Background Image Wrapper -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+
+
+
+
+  <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+  
+  <!-- / IE9 Placeholder Support -->
+
+
+</body>
+</html>

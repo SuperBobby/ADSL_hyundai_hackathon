@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<!--
+Template Name: Escarine-Veh
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+<html>
+<head>
+  <title>현대 카풀 서비스 | 드라이빙 타입</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="{{ url_for('static', filename='css/layout.css') }}" rel="stylesheet" type="text/css" media="all">
+  <link href="{{ url_for('static', filename='css/show_match.css') }}" rel="stylesheet" type="text/css" media="all">
+
+  <!-- JAVASCRIPTS -->
+  
+  <script src="{{ url_for('static', filename='js/jquery.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.mobilemenu.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.backtotop.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.placeholder.min.js')}}"></script>
+
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}">
+  </script>
+
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="{{ url_for('static', filename='js/RadarChart.js')}}"></script>
+  </script>
+
+  <script src="{{ url_for('static', filename='js/show_match.js')}}">
+  </script>
+
+  
+
+
+  <style>
+        body {
+          overflow: hidden;
+          margin: 0;
+          font-size: 14px;
+          font-family: "Helvetica Neue", Helvetica;
+        }
+
+        #chart {
+          position: relative;
+          top: 0px;
+          left: 0px;
+        }
+        #chart2 {
+          position: relative;
+          top: 0px;
+          left: 0px;
+        }
+       
+    </style>
+
+
+</head>
+<body id="top">
+  <div id="data_holder" driver_id = {{driver_id}}></div>
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- Top Background Image Wrapper -->
+<div class="relative bgded overlay" style="background-image:url('{{ url_for('static', filename='image/backgrounds/hyundai.jpg') }}');"> 
+  <!-- ################################################################################################ -->
+  <div class="wrapper row0">
+    <div id="topbar" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <div class="fl_left">
+        <ul class="nospace inline pushright">
+          <li><i class="fa fa-user"></i> <a href="#">Register</a></li>
+          <li><i class="fa fa-sign-in"></i> <a href="#">Login</a></li>
+        </ul>
+      </div>
+      <div class="fl_right">
+        <ul class="faico clear">
+          <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a class="faicon-pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
+          <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
+          <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+          <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+          <li><a class="faicon-rss" href="#"><i class="fa fa-rss"></i></a></li>
+        </ul>
+      </div>
+      <!-- ################################################################################################ -->
+    </div>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="wrapper">
+      <header id="header" class="hoc clear"> 
+        <!-- ################################################################################################ -->
+        <div id="logo" class="fl_left">
+          <h1><a href="{{ url_for('home') }}">현대 카풀 서비스</a></h1>
+        </div>
+        <div class="fl_right">
+          <ul class="nospace inline pushright">
+            <li><i class="fa fa-phone"></i> (010) 5052 5601</li>
+            <li><i class="fa fa-envelope-o"></i> seungeun07@snu.ac.kr</li>
+          </ul>
+        </div>
+        <!-- ################################################################################################ -->
+      </header>
+    </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="wrapper row2">
+      <nav id="mainav" class="hoc clear"> 
+        <!-- ################################################################################################ -->
+        <ul class="clear">
+          <li><a href="#">정기카풀</a></li>
+          <li><a href="{{ url_for('recommend') }}">단기카플</a></li>
+          <li><a href="#">추천카풀</a></li>
+          <li><a href="#">여성전용카풀</a></li>
+          <li><a href="#">고객센터</a></li>
+        </ul>
+        <!-- ################################################################################################ -->
+      </nav>
+    </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="wrapper right">
+    <div id="pagetitle" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <h2>홍길동 {{driver_id}} 님의 드라이빙 타입 분석</h2>
+      <!-- ################################################################################################ -->
+    </div>
+    <div id="breadcrumb" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">단기카풀</a></li>
+        <li><a href="#">드라이버정보</a></li>
+      </ul>
+      <!-- ################################################################################################ -->
+    </div>
+  </div>
+  <!-- ################################################################################################ -->
+</div>
+<!-- End Top Background Image Wrapper -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="content"> 
+      <!-- ################################################################################################ -->
+      
+      
+      <h1 style = "text-align : center; font-size : 80px; color : rgb(31, 119, 180);"><b>매칭율 : 
+      <span id = "cos_sim"></span>%</b>
+      </h1>
+      <br>
+      <br>
+
+      <h2>주행 타입 분석</h2>
+      <br>
+      <p class = "detail">
+          속도 중앙값 : <span id = "your_med" class = "your_detail"></span>km/h / 
+                      <span id = "my_med" class = "my_detail"></span>km/h
+      </p>
+      <p class = "detail">
+          속도 상위 90%값 : <span id = "your_peak" class = "your_detail"></span>km/h / 
+                            <span id = "my_peak" class = "my_detail"></span>km/h
+      </p>
+      <p class = "detail">
+            km당 급회전 수 : <span id = "your_angle" class = "your_detail"></span>회 / 
+                            <span id = "my_angle" class = "my_detail"></span>회
+      </p>
+      <p class = "detail">
+            평균 에너지 효율(z값) : <span id = "your_energy" class = "your_detail"></span> / 
+                                  <span id = "my_energy" class = "my_detail"></span>
+      </p>
+      <p class = "detail">
+          공회전 비율 : <span id = "your_idle" class = "your_detail"></span>% / 
+                              <span id = "my_idle" class = "my_detail"></span>%
+      </p>
+      <p class = "detail">
+          에어컨 작동시간 비율 : <span id = "your_aircon" class = "your_detail"></span>% / 
+                                <span id = "my_aircon" class = "my_detail"></span>%
+      </p>
+
+      <br>
+      <div id="body">
+      <div class ='one_half first'><div id="chart1"></div></div>
+      <div class ='one_half'><div id="chart2"></div></div>
+      </div>
+
+      
+
+
+
+
+      <br>
+      <h2>최근 주행기록</h2>
+      <div class="scrollable">
+        <table>
+          <thead>
+            <tr>
+              <th>주행1</th>
+              <th>주행2</th>
+              <th>주행3</th>
+              <th>주행4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>서울 -> 부산</td>
+              <td>부산 -> 서울</td>
+              <td>서울 -> 평양</td>
+              <td>평양 -> 서울</td>
+            </tr>
+            <tr>
+              <td>2016/8/23 10:23AM 출발</td>
+              <td>2016/8/21 18:29PM 출발</td>
+              <td>2016/8/17 12:51PM 출발</td>
+              <td>2016/8/6 9:44AM 출발</td>
+            </tr>
+            <tr>
+              <td>동승인원 1명</td>
+              <td>동승인원 2명</td>
+              <td>동승인원 3명</td>
+              <td>동승인원 2명</td>
+            </tr>
+            <tr>
+              <td>그랜져 3.3</td>
+              <td>그랜져 3.3</td>
+              <td>그랜져 3.3</td>
+              <td>그랜져 3.3</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br>
+      <div id="comments">
+        <h2>주행 타입</h2>
+        <ul>
+          <li>
+            <article>
+              <header>
+              
+                <address>
+                By <a href="#">A 타입</a>
+                </address>
+              </header>
+              <div class="comcont">
+                <p>다이나믹 드라이빙 / 엑셀레이터를 적절히 사용하는 동적인 운행 타입</p>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <header>
+                
+                <address>
+                By <a href="#">B 타입</a>
+                </address>
+            
+              </header>
+              <div class="comcont">
+                <p>저속 비율이 높은 안정적인 드라이빙 / 급가속과 과속이 적은 안정적인 운행 타입</p>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <header>
+               
+                <address>
+                By <a href="#">C 타입</a>
+                </address>
+              
+              </header>
+              <div class="comcont">
+                <p>중속 비율이 높은 안정적인 드라이빙 / 급가속과 과속이 적은 안정적인 운행 타입</p>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <header>
+               
+                <address>
+                By <a href="#">D 타입</a>
+                </address>
+              
+              </header>
+              <div class="comcont">
+                <p>스피드 드라이빙 / 최대 속도가 높고 고속 주행시간 비율이 높은 운행 타입</p>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <h2>카풀 후기</h2>
+        <form action="#" method="post">
+          <div class="one_third first">
+            <label for="name">이름 <span>*</span></label>
+            <input type="text" name="name" id="name" value="" size="22" required>
+          </div>
+          <div class="one_third">
+            <label for="email">이메일 <span>*</span></label>
+            <input type="email" name="email" id="email" value="" size="22" required>
+          </div>
+          <div class="block clear">
+            <label for="comment">Your Comment</label>
+            <textarea name="comment" id="comment" cols="25" rows="10"></textarea>
+          </div>
+          <div>
+            <input type="submit" name="submit" value="Submit Form">
+            &nbsp;
+            <input type="reset" name="reset" value="Reset Form">
+          </div>
+        </form>
+      </div>
+      <!-- ################################################################################################ -->
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+  <!-- ################################################################################################ -->
+
+  <!-- ################################################################################################ -->
+  <div class="wrapper row4">
+    <footer id="footer" class="hoc topspace-0 clear"> 
+      <!-- ################################################################################################ -->
+      <div class="one_third first">
+        <h6 class="title">Nibh et libero quis</h6>
+        <ul class="nospace linklist">
+          <li><a href="#">Duis at nulla eget erat tempus</a></li>
+          <li><a href="#">Mauris enim vestibulum sed tellus</a></li>
+          <li><a href="#">Consectetur ornare magna eleifend</a></li>
+          <li><a href="#">Elit feugiat aliquet magna purus</a></li>
+          <li><a href="#">Mattis mollis fermentum mauris</a></li>
+        </ul>
+      </div>
+      <div class="one_third">
+        <h6 class="title">Posuere ante donec</h6>
+        <ul class="nospace linklist contact">
+          <li><i class="fa fa-map-marker"></i>
+            <address>
+            Street Name &amp; Number, Town, Postcode/Zip
+            </address>
+          </li>
+          <li><i class="fa fa-phone"></i> +00 (123) 456 7890</li>
+          <li><i class="fa fa-fax"></i> +00 (123) 456 7890</li>
+          <li><i class="fa fa-envelope-o"></i> sales@domain.com</li>
+        </ul>
+      </div>
+      <div class="one_third">
+        <h6 class="title">Sit amet felis sagittis</h6>
+        <p class="btmspace-15">Fermentum vivamus sem diam maximus nec convallis eget congue.</p>
+        <ul class="nospace linklist opentimes">
+          <li><span>Monday - Friday</span> <span>08.00 - 20.00</span></li>
+          <li><span>Saturday</span> <span>08.00 - 20.00</span></li>
+          <li><span>Sunday</span> <span>By Appointment</span></li>
+        </ul>
+      </div>
+      <!-- ################################################################################################ -->
+    </footer>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="wrapper row5">
+      <div id="copyright" class="hoc clear"> 
+        <!-- ################################################################################################ -->
+        <p class="fl_left">Copyright &copy; 2015 - All Rights Reserved - <a href="#">ADSL, Hyundai Hackathon</a></p>
+        <!-- ################################################################################################ -->
+      </div>
+    </div>
+  <!-- ################################################################################################ -->
+</div>
+<!-- End Bottom Background Image Wrapper -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+
+</body>
+</html>

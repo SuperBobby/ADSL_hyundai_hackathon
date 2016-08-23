@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>현대 카풀 서비스</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="{{ url_for('static', filename='css/layout.css') }}" rel="stylesheet" type="text/css" media="all">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+
+  <script src="{{ url_for('static', filename='js/jquery.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.mobilemenu.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.backtotop.js')}}"></script>
+  <!-- IE9 Placeholder Support -->
+  <script src="{{ url_for('static', filename='js/jquery.placeholder.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}">
+  </script>
+  
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- Top Background Image Wrapper -->
+<div class="relative bgded overlay" style="background-image:url('{{ url_for('static', filename='image/backgrounds/hyundai.jpg') }}');"> 
+  <!-- ################################################################################################ -->
+  <div class="wrapper row0">
+    <div id="topbar" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <div class="fl_left">
+        <ul class="nospace inline pushright">
+          <li><i class="fa fa-user"></i> <a href="#">Register</a></li>
+          <li><i class="fa fa-sign-in"></i> <a href="#">Login</a></li>
+        </ul>
+      </div>
+      <div class="fl_right">
+        <ul class="faico clear">
+          <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a class="faicon-pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
+          <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
+          <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+          <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+          <li><a class="faicon-rss" href="#"><i class="fa fa-rss"></i></a></li>
+        </ul>
+      </div>
+      <!-- ################################################################################################ -->
+    </div>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="wrapper">
+    <header id="header" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <div id="logo" class="fl_left">
+        <h1><a href="{{ url_for('home') }}">현대 카풀 서비스</a></h1>
+      </div>
+      <div class="fl_right">
+        <ul class="nospace inline pushright">
+          <li><i class="fa fa-phone"></i> (010) 5052 5601</li>
+          <li><i class="fa fa-envelope-o"></i> seungeun07@snu.ac.kr</li>
+        </ul>
+      </div>
+      <!-- ################################################################################################ -->
+    </header>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="wrapper row2">
+    <nav id="mainav" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <ul class="clear">
+        <li><a href="#">정기카풀</a></li>
+        <li><a href="{{ url_for('recommend') }}">단기카플</a></li>
+        <li><a href="#">추천카풀</a></li>
+        <li><a href="#">여성전용카풀</a></li>
+        <li><a href="#">고객센터</a></li>
+      </ul>
+      <!-- ################################################################################################ -->
+    </nav>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="wrapper">
+    <div id="pageintro" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <div class="introtxt">
+      <h2 class="heading">정기카풀 / 단기카풀 / 여성전용카풀</h2>
+        <p>저렴한 가격에 함께 이용하세요.</p>
+      </div>
+      <!-- ################################################################################################ -->
+      <div class="clear"></div>
+    </div>
+  </div>
+  <!-- ################################################################################################ -->
+</div>
+<!-- End Top Background Image Wrapper -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <main id="introblocks" class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <ul class="nospace group elements">
+      <li class="one_third first">
+        <article class="elementwrapper">
+          <figure><img src="{{ url_for('static', filename='image/car1.jpg') }}" alt="">
+            <figcaption><a href="#"><i class="fa fa-motorcycle"></i></a></figcaption>
+          </figure>
+          <div class="elementinfo">
+            <h4 class="heading font-x1">그랜저 3.3</h4>
+            <p>2016년 8월 23일 8:30</p>
+          </div>
+          <ul class="nospace group meta">
+            <li><i class="fa fa-motorcycle"></i> 2015</li>
+            <li><i class="fa fa-gears"></i> Manual</li>
+            <li><i class="fa fa-tachometer"></i> 5,036</li>
+            <li><i class="fa fa-info"></i> <a href="#">Details</a></li>
+          </ul>
+        </article>
+      </li>
+      <li class="one_third">
+        <article class="elementwrapper">
+          <figure><img src="{{ url_for('static', filename='image/car2.jpg') }}" alt="">
+            <figcaption><a href="#"><i class="fa fa-car"></i></a></figcaption>
+          </figure>
+          <div class="elementinfo">
+            <h4 class="heading font-x1">쏘나타 브릴리언트</h4>
+            <p>2016년 8월 22일 19:30</p>
+          </div>
+          <ul class="nospace group meta">
+            <li><i class="fa fa-car"></i> 2014</li>
+            <li><i class="fa fa-gears"></i> Auto.</li>
+            <li><i class="fa fa-tachometer"></i> 12,651</li>
+            <li><i class="fa fa-info"></i> <a href="#">Details</a></li>
+          </ul>
+        </article>
+      </li>
+      <li class="one_third">
+        <article class="elementwrapper">
+          <figure><img src="{{ url_for('static', filename='image/car3.jpg') }}" alt="">
+            <figcaption><a href="#"><i class="fa fa-truck"></i></a></figcaption>
+          </figure>
+          <div class="elementinfo">
+            <h4 class="heading font-x1">투싼</h4>
+            <p>2016년 8월 22일 20:40</p>
+          </div>
+          <ul class="nospace group meta">
+            <li><i class="fa fa-truck"></i> 2014</li>
+            <li><i class="fa fa-gears"></i> Manual</li>
+            <li><i class="fa fa-tachometer"></i> 65,725</li>
+            <li><i class="fa fa-info"></i> <a href="#">Details</a></li>
+          </ul>
+        </article>
+      </li>
+    </ul>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<section id="services" class="wrapper row3">
+  <div class="hoc container clear"> 
+    <!-- ################################################################################################ -->
+    <h2 class="header font-x2 btmspace-30">카풀 차량 등록</h2>
+    <ul class="nospace group btmspace-30">
+      <li class="one_half first btmspace-3ㅜ0">
+        <article><i class="icon fa fa-gbp"></i>
+          <h6 class="heading">정기카풀</h6>
+          <p><a href="#"><i class="fa fa-arrow-circle-right"></i></a></p>
+        </article>
+      </li>
+      <li class="one_half btmspace-30">
+        <article><i class="icon fa fa-file-text-o"></i>
+          <h6 class="heading">단기카풀</h6>
+          <p><a href="#"><i class="fa fa-arrow-circle-right"></i></a></p>
+        </article>
+      </li>
+      <li class="one_half first">
+        <article><i class="icon fa fa-recycle"></i>
+          <h6 class="heading">여성전용카풀</h6>
+          <p><a href="#"><i class="fa fa-arrow-circle-right"></i></a></p>
+        </article>
+      </li>
+      <li class="one_half">
+        <article><i class="icon fa fa-user"></i>
+          <h6 class="heading">장거리카풀</h6>
+          <p><a href="#"><i class="fa fa-arrow-circle-right"></i></a></p>
+        </article>
+      </li>
+    </ul>
+    <p class="nospace">고객의 모든 정보는 소중히 다루겠습니다.</p>
+    <!-- ################################################################################################ -->
+  </div>
+</section>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+
+
+<!-- Bottom Background Image Wrapper -->
+
+<!-- End Bottom Background Image Wrapper -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->  
+
+
+
+
+
+
+
+<!-- / IE9 Placeholder Support -->
+</body>
+</html>
